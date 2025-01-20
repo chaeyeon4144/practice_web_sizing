@@ -1,0 +1,152 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+}
+/* nav */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* 1920px로 지정하지않기 */
+  width: 100%;
+  background-color: antiquewhite;
+  display: flex;
+
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+nav > a:hover{
+    text-decoration: underline;
+
+}
+.navIcon {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#menu {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+#menu:after{
+    content: "";
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: block;
+    opacity: 0;
+    /* 속도감 */
+    transition: all 0.3s;
+    position: absolute;
+    top: -6px;
+    left: -7px;
+
+}
+#menu:hover::after{
+    opacity: 1;
+    
+}
+/* a메뉴안에 컨텐데 */
+#menu:before{
+    content: attr(aria-label);/*aria-leabel의 값을 사용할것이다*/
+    /* atribute 아디안에 속성을 찾겠다 */
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    font-size: 12px;
+    opacity: 0;
+    white-space:nowrap; /*글자 텍스트 줄바꿈 방지*/
+    transition: all 0.3s;
+    
+    
+
+}
+#menu:hover:before{
+    opacity: 1;
+}
+#menu svg {
+  position: relative;
+  width: 100%;
+  opacity: 0.5;
+}
+/* 로그인 */
+#login {
+  width: 70px;
+  height: 30px;
+  color: white;
+  background-color: #4484f3;
+  border: 0;
+  border-radius: 3px;
+}
+.main-wrap{
+    margin-top: 200px;
+    text-align: center;
+    /* background-color: #4484f3; */
+    padding: 50px;
+}
+/* 검색바 */
+.search_bar{
+    width: 70%;
+    /* 반응형 */
+    max-width: 560px;
+    min-width: 310px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+
+}
+.search_bar i{
+
+}
+.search_bar input{
+    width: 60%;
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+.search-icon{
+    width: 10%;
+/* 반응형 */
+    min-width: 48px;
+    display: flex;
+    gap: 10px;
+    background-color: aqua;
+}
+.search-icon a{
+    width: calc(100% / 2);
+
+}
+.search-icon a img{
+    width: 100%;
+}
+/* 반응형 */
+@media screen and (max-width: 390px;){
+    .search_bar{
+        padding: 5px 15px;
+    }
+}
