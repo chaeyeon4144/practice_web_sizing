@@ -1,0 +1,64 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+}
+body {
+  background-color: #f2f2f2;
+}
+.container {
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  margin: 100px auto;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+.input-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: antiquewhite;
+}
+.input-group i {
+  color: #888;
+  font-size: 18px;
+  /* margin-right: 10px; */
+}
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+/* 속성이 submit 인 태그에만 적용 */
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  border: 0;
+  background-color: #4284f3;
+  color: #fff;
+}
+button[type="submit"]
